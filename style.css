@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d1117;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.login-container {
+  background-color: #161b22;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(30, 144, 255, 0.3);
+  width: 320px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1E90FF;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0d1117;
+  color: #ffffff;
+  border: 1px solid #30363d;
+}
+
+.login-container input:focus {
+  outline: 2px solid #1E90FF;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1E90FF;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0b71cc;
+}
+
+.login-container .cadastrar-btn {
+  background-color: #0d6efd;
+}
+
+.login-container .cadastrar-btn:hover {
+  background-color: #084298;
+}
+
+.link-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.link-container a {
+  color: #1E90FF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}
