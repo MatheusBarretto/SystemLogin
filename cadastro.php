@@ -1,37 +1,30 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form action="cadastro.php" method="POST">
+        <div class="login-container">
+            <h2>CADASTRO</h2>
+            <label for="usuario">Usuario:</label>
+            <input type="text" value="" name="usuario" placeholder="digite seu usuário">
 
-try{
-    if(isset($_POST['usuario']) && isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['confirmarsenha'])){
-        $usuario = $_POST['usuario'];
-        $email = $_POST ['email'];
-        $senha = $_POST['senha'];
-        $senhaConfirm = $_POST['confirmarsenha'];
+            <label for="email">E-mail:</label>
+            <input type="text" value="" required name="email" placeholder="exemplo@exemplo.com">
 
-    }else{
-        echo "Erro no formulário";
-    }
+            <label for="senha">Senha:</label>
+            <input type="password" value="" name="senha" required placeholder="**********">
 
-    if ($senha == $senhaConfirm){
-        $hashSenha = password_hash($senha, PASSWORD_BCRYPT);
-    }else{
-        echo "As senhas não são iguais";
-    }
+            <label for="confirmarsenha">Confirmar Senha:</label>
+            <input type="password" value="" required name="confirmarsenha" placeholder="**********">
 
-    require 'banco/conexao.php';
-
-    $sql = "insert into usuario (login, email, senha) 
-            values 
-            (:login, :email, :senha)";
-
-    $insert = $conn->prepare($sql);
-    $insert->bindparam(':login', $usuario, PDO::PARAM_STR);
-    $insert->bindparam(':email', $email, PDO::PARAM_STR);
-    $insert->bindparam(':senha', $hashSenha, PDO::PARAM_STR);
-    $insert->execute();
-
-    echo "<script> window.alert('Usuário cadastrado com sucesso!') 
-            window.location.href='index.html'</script>";
-
-}catch(PDOexception $e){
-    echo "<h2 style='color:red;'> Erro: " .$e->getMessage ()."</h2>;";
-}
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+</body>
+</html>
