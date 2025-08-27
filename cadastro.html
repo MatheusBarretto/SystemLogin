@@ -8,17 +8,20 @@
 </head>
 <body>
     
-    <form action="cadastro.php" method="post">
+    <form action="cadastro.php" method="POST">
         <div class="login-container">
             <h2>CADASTRO</h2>
-            <label for="usuario">Email:</label>
-            <input type="text" value="" required placeholder="exemplo@exemplo.com">
+            <label for="usuario">Usuario:</label>
+            <input type="text" value="" name="usuario" placeholder="digite seu usuário">
+
+            <label for="email">E-mail:</label>
+            <input type="text" value="" required name="email" placeholder="exemplo@exemplo.com">
 
             <label for="senha">Senha:</label>
-            <input type="password" value="" required placeholder="**********">
+            <input type="password" value="" name="senha" required placeholder="**********">
 
             <label for="confirmarsenha">Confirmar Senha:</label>
-            <input type="password" value="" required placeholder="**********">
+            <input type="password" value="" required name="confirmarsenha" placeholder="**********">
 
             <button type="submit">Cadastrar</button>
         </div>
