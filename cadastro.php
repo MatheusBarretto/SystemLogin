@@ -11,8 +11,8 @@
     <form action="cadastro.php" method="POST">
         <div class="login-container">
             <h2>CADASTRO</h2>
-            <label for="usuario">Usuario:</label>
-            <input type="text" value="" name="usuario" placeholder="digite seu usuário">
+            <label for="nome">Nome:</label>
+            <input type="text" value="" name="nome" placeholder="Nome completo">
 
             <label for="email">E-mail:</label>
             <input type="text" value="" required name="email" placeholder="exemplo@exemplo.com">

@@ -2,7 +2,7 @@
 
 try{
     if(isset($_POST['usuario']) && isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['confirmarsenha'])){
-        $usuario = $_POST['usuario'];
+        $nome = $_POST['nome'];
         $email = $_POST ['email'];
         $senha = $_POST['senha'];
         $senhaConfirm = $_POST['confirmarsenha'];
@@ -19,12 +19,14 @@ try{
 
     require 'banco/conexao.php';
 
+
+
     $sql = "insert into usuario (login, email, senha) 
             values 
-            (:login, :email, :senha)";
+            (:nome, :email, :senha)";
 
     $insert = $conn->prepare($sql);
-    $insert->bindparam(':login', $usuario, PDO::PARAM_STR);
+    $insert->bindparam(':nome', $nome, PDO::PARAM_STR);
     $insert->bindparam(':email', $email, PDO::PARAM_STR);
     $insert->bindparam(':senha', $hashSenha, PDO::PARAM_STR);
     $insert->execute();

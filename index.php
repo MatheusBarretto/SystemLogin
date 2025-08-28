@@ -10,7 +10,7 @@
   <div class="login-container">
     <h2>LOGIN</h2>
     <form action="#" method="POST">
-      <label for="email">Email</label>
+      <label for="email">Login / Email</label>
       <input type="email" id="email" name="email" required>
 
       <label for="senha">Senha</label>
@@ -18,7 +18,7 @@
 
       <button type="submit">Entrar</button>
 
-      <button onclick="window.location.href='cadastro.html'" type="button" class="cadastrar-btn">Cadastrar</button>
+      <button onclick="window.location.href='cadastro.php'" type="button" class="cadastrar-btn">Cadastrar</button>
 
       <div class="link-container">
         <a href="#">Esqueci minha senha</a>
